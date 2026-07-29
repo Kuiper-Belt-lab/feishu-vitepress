@@ -51,6 +51,12 @@ onUnmounted(() => {});
 
 <template>
   <Layout>
+    <template #nav-bar-title-after>
+      <span class="brand-title">
+        <span class="brand-title__main">Kuiper-Belt</span>
+        <span class="brand-title__suffix">AI Lab</span>
+      </span>
+    </template>
     <!-- 文章顶部模块 -->
     <template #doc-before>
       <ArticleMeta />
@@ -85,3 +91,26 @@ onUnmounted(() => {});
     </template>
   </Layout>
 </template>
+
+<style scoped>
+.brand-title {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.35rem;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.brand-title__main {
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.brand-title__suffix {
+  color: var(--vp-c-text-2);
+  font-size: 0.78rem;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+}
+</style>

@@ -1,8 +1,7 @@
 import { defineConfig } from "vitepress";
 import sidebar from "../../sider.json";
 
-const blog_title = process.env.BLOG_TITLE || "超级小朋友blog";
-const icp_code = process.env.ICP_CODE || "粤ICP备2024236057号";
+const blog_title = process.env.BLOG_TITLE || "Kuiper-Belt AI Lab";
 
 export const zh = defineConfig({
   title: blog_title,
@@ -10,7 +9,8 @@ export const zh = defineConfig({
   description: "记录技术实践、AI 工具、项目开发、自动化探索与生活随想的个人博客。",
 
   themeConfig: {
-    nav: [{ text: "关于", link: "https://github.com/ftyszyx" }],
+    siteTitle: false,
+    nav: [{ text: "关于", link: "https://github.com/Kuiper-Belt-lab" }],
     outlineTitle: "本文导航",
     lastUpdatedText: "最后更新时间",
     editLink: {
@@ -20,10 +20,7 @@ export const zh = defineConfig({
     sidebar: sidebar,
     footer: {
       message: "基于 MIT 许可发布",
-      copyright: `版权所有 © 2019-${new Date().getFullYear()}<br/>
-          <a href="http://beian.miit.gov.cn/" target="_blank" rel="nofollow" class="d-none d-lg-inline-block">
-${icp_code}</a>
-      `,
+      copyright: `版权所有 © 2019-${new Date().getFullYear()}`,
     },
 
     docFooter: {
